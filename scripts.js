@@ -71,22 +71,22 @@ function gVizloaded() {
 console.log("google visualization is loaded!");
 
 
-	var myURL = History.getState().cleanUrl;
-	var queryArray = myURL.split("?");
+	var mURL = History.getState().cleanUrl;
+	var mqueryArray = mURL.split("?");
 
 
-	var defaultYear = "1990";
+	var mdefaultYear = "1990";
 
-	if (queryArray.length > 1) {
+	if (mqueryArray.length > 1) {
 
-		defaultYear = queryArray[1].split("=")[1];
+		mdefaultYear = mqueryArray[1].split("=")[1];
 	}
 
 $(".btn-success").on("click", displayNewData);
 
 
 
-$("#year_2000").click();
+$("#year_"+mdefaultYear).click();
 
 
 }
